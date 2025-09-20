@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elke Collections | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <h1 class="logo-text">elke</h1>
+        <p class="logo-subtext">a gift of nature, refined</p>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Banner Section with Galaxy Video -->
+  <section id="home" class="hero-section">
+    <video autoplay muted loop playsinline class="video-bg" preload="auto" aria-label="Galaxy video background">
+      <source src="image/cover.jpg" type="image/jpg" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-heading">Launching soon</h1>
+      <p class="hero-subheading">Luxury Perfumes &amp; Skincare</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container py-5 text-center">
+    <h2 style="color:#264d00;">About Elke</h2>
+    <p>
+      I am the breath in every flower, the whisper in every leaf, and the essence captured in Elke Collections. From my forests, fields, and gardens, I offer you my purest gifts—fragrances and textures born of my soil and sunlight. I am patient and gentle, waiting for human hands to refine my wonders without losing my soul. When you wear Elke, you carry a piece of me—a reminder that true beauty grows naturally, nurtured by care and respect. Listen closely, and you will hear my story in every scent, feel my calm in every touch.
+    </p>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <h2 class="mb-4" style="color: #264d00; text-align: center;">Explore Our Collections</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Elke - Perfume -->
+      <div class="col">
+        <a href="perfume.html" class="text-decoration-none text-dark" aria-label="Elke Perfume Collection">
+          <div class="card">
+            <img src="image/perfume.jpg" alt="Elke Perfume Collection" class="card-img-top" />
+            <div class="card-body text-center">
+              <h4 style="color: #264d00;">Elke - Perfume</h4>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- Elke - Beauty and Personal -->
+      <div class="col">
+        <a href="beauty.html" class="text-decoration-none text-dark" aria-label="Elke Beauty and Personal Collection">
+          <div class="card">
+            <img src="image/perfume.jpg" alt="Elke Beauty and Personal Collection" class="card-img-top" />
+            <div class="card-body text-center">
+              <h4 style="color: #264d00;">Elke - Beauty and Personal</h4>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- Elke - Home -->
+      <div class="col">
+        <a href="home.html" class="text-decoration-none text-dark" aria-label="Elke Home Collection">
+          <div class="card">
+            <img src="image/perfume.jpg" alt="Elke Home Collection" class="card-img-top" />
+            <div class="card-body text-center">
+              <h4 style="color: #264d00;">Elke - Home</h4>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Contact Section -->
+  <section id="contact" style="background:#326d44; min-height:100vh; color:#fff; display:flex; align-items:center; justify-content:center; flex-direction:column;">
+    <div style="max-width:600px; width:100%; padding:40px 24px;">
+      <h1 style="text-align:center; font-size:2.5rem; margin-bottom:4px;">Contact Us</h1>
+      <hr style="width:60px; margin:12px auto; border:1.5px solid #eee; opacity:0.3;">
+      <div style="text-align:center; margin-bottom:32px; font-size:1.1rem;"><strong>Drop us a line!</strong></div>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email*" required />
+        <textarea name="message" placeholder="Message" rows="5" required></textarea>
+        <div style="text-align:center;">
+          <button type="submit">SEND</button>
+        </div>
+      </form>
+      <div id="formStatus"></div>
+    </div>
+  </section>
+  
+  <script>
+    const form = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+    
+      formStatus.textContent = "Sending...";
+    
+      try {
+        const response = await fetch('http://localhost:3000/send', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+      
+        if (response.ok) {
+          formStatus.textContent = "Thank you! Your message was sent.";
+          form.reset();
+        } else {
+          formStatus.textContent = "Oops! Something went wrong.";
+        }
+      } catch (error) {
+        formStatus.textContent = "Error sending message. Please try again later.";
+      }
+    });
+  </script>
+
+  <!-- Footer Section -->
+  <footer class="site-footer" style="background: #326d44; color: #fff; text-align: center; padding: 40px 20px;">
+    <div class="footer-social" style="margin-bottom: 20px;">
+      <a href="https://facebook.com" target="_blank" style="color: #fff; margin: 0 15px; font-size: 28px; text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank" style="color: #fff; margin: 0 15px; font-size: 28px; text-decoration: none;"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank" style="color: #fff; margin: 0 15px; font-size: 28px; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank" style="color: #fff; margin: 0 15px; font-size: 28px; text-decoration: none;"><i class="fab fa-youtube"></i></a>
+      <a href="https://pinterest.com" target="_blank" style="color: #fff; margin: 0 15px; font-size: 28px; text-decoration: none;"><i class="fab fa-pinterest-p"></i></a>
+    </div>
+    <p class="footer-desc" style="margin: 20px 0; font-size: 16px; line-height: 1.6;">
+      Elke Collection's business concept is to offer luxurious, nature-inspired skincare and perfumes at accessible prices. We believe in harnessing the essence of the natural world to deliver products that are both effective and sustainable, reflecting our commitment to quality and the environment.
+    </p>
+    <div class="footer-logo">
+      <span class="brand" style="font-family: 'Billion Miracles', Arial, sans-serif;font-size: 66px;letter-spacing: 2px;margin: 5px 0;display: inline-block;">elke</span>
+    </div>
+    <div class="footer-country" style="margin-top: 5px; font-size: 18px; color: #e0e0e0;">
+      United Arab Emirates
+    </div>
+  </footer>
+</body>
+</html>

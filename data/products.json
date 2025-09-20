@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "title": "SOLARA Eau de Parfum (50ml)",
+    "description": "Floral blend with rose & amber.",
+    "priceUSD": 120,
+    "collection": "Perfumes",
+    "image": "/images/solara.jpg"
+  },
+  {
+    "id": 2,
+    "title": "VERDIVA Eau de Parfum (50ml)",
+    "description": "Woody notes with oud and sandalwood.",
+    "priceUSD": 135,
+    "collection": "Perfumes",
+    "image": "/images/verdvia.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Ecolis Perfume (50ml)",
+    "description": "Fresh, green and uplifting fragrance.",
+    "priceUSD": 110,
+    "collection": "Perfumes",
+    "image": "/images/ecolis.jpg"
+  },
+
+  {
+    "id": 16,
+    "title": "Hydrating Face Cream",
+    "description": "Deep moisturizing cream for smooth skin.",
+    "priceUSD": 55,
+    "collection": "Skin Care",
+    "image": "/images/facecream.jpg"
+  },
+  {
+    "id": 17,
+    "title": "Vitamin C Face Serum",
+    "description": "Brightens and reduces spots.",
+    "priceUSD": 70,
+    "collection": "Skin Care",
+    "image": "/images/faceserum.jpg"
+  },
+  {
+    "id": 18,
+    "title": "Elke Body Lotion",
+    "description": "Softens skin with aloe vera and oils.",
+    "priceUSD": 45,
+    "collection": "Skin Care",
+    "image": "/images/bodylotion.jpg"
+  }
+]

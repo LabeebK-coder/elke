@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skin Care Collection - Elke Collections</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #264d00;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #2d6a4f;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .product-card {
+      border: 1px solid #95d5b2;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      transition: box-shadow 0.3s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 0 10px #95d5b2;
+    }
+
+    .product-image {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .product-title {
+      font-weight: bold;
+      color: #264d00;
+      margin-top: 0.75rem;
+    }
+
+    .product-price {
+      color: #40916c;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .product-type {
+      font-style: italic;
+      color: #6c757d;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Skin Care Collection</h1>
+    <a href="index.html" style="color:#d8f3dc; text-decoration:underline;">&lt; Back to Home</a>
+  </header>
+
+  <div class="container my-4">
+    <div class="row g-4">
+      <div class="col-md-6 d-flex">
+        <div class="product-card">
+          <img src="image/perfume.jpg" alt="Hydrating Serum" class="product-image" />
+          <h3 class="product-title">BODY LOTION & SUNSCREEN</h3>
+          <p class="product-price">$39.99</p>
+          <p class="product-type">Type: Serum</p>
+          <p>Lightweight serum that deeply hydrates and refreshes skin.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 d-flex">
+        <div class="product-card">
+          <img src="image/perfume.jpg" alt="Gentle Cleanser" class="product-image" />
+          <h3 class="product-title">FACE SERUM</h3>
+          <p class="product-price">$24.99</p>
+          <p class="product-type">Type: Cleanser</p>
+          <p>Soft cleanser suitable for all skin types, removes impurities.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 d-flex">
+        <div class="product-card">
+          <img src="image/perfume.jpg" alt="Rejuvenating Night Cream" class="product-image" />
+          <h3 class="product-title">FACE CREAM</h3>
+          <p class="product-price">$45.99</p>
+          <p class="product-type">Type: Cream</p>
+          <p>Nourishing night cream that revitalizes skin while you sleep.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 d-flex">
+        <div class="product-card">
+          <img src="image/perfume.jpg" alt="LIP BALM" class="product-image" />
+          <h3 class="product-title">Daily Moisturizer</h3>
+          <p class="product-price">$29.99</p>
+          <p class="product-type">Type: Moisturizer</p>
+          <p>Light daily moisturizer to keep skin soft and hydrated all day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

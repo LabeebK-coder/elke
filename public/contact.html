@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - Elke Collections</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: #181818;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .contact-container {
+      max-width: 560px;
+      margin: 4rem auto 0 auto;
+      padding: 2rem;
+      background: rgba(24,24,24,0.95);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px #0006;
+    }
+    h1, h2 {
+      color: #fff;
+    }
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 600;
+      margin-bottom: .5rem;
+    }
+    .contact-subtitle {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      color: #dedede;
+    }
+    .form-control, .form-check-input {
+      background: transparent;
+      border: 1px solid #bbb;
+      color: #fff;
+      border-radius: 5px;
+      margin-bottom: 1.25rem;
+    }
+    .form-control::placeholder {
+      color: #bbb;
+      opacity: 1;
+    }
+    .form-check-label {
+      color: #bbb;
+      font-size: .98rem;
+    }
+    .contact-btn {
+      width: 100%;
+      background: #40916c;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      padding: 0.6rem 0;
+      margin-top: 10px;
+      transition: background .2s;
+    }
+    .contact-btn:hover {
+      background: #267050;
+    }
+    .privacy-note {
+      font-size: .85rem;
+      color: #aaa;
+      margin-top: 1rem;
+    }
+    @media (max-width: 600px) {
+      .contact-container { padding: 1rem; }
+      h1 { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-container">
+    <h1 class="text-center">Contact Us</h1>
+    <div class="contact-subtitle text-center">Drop us a line!</div>
+    <form id="contactForm" action="https://formspree.io/f/xzzanraa" method="POST">
+  <input type="text" name="name" placeholder="Name" required />
+  <input type="email" name="email" placeholder="Email*" required />
+  <textarea name="message" placeholder="Message" rows="5" required></textarea>
+  <div style="text-align:center;">
+    <button type="submit">SEND</button>
+  </div>
+</form>
+
+    <div class="privacy-note text-center mt-3">
+      This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+    </div>
+  </div>
+</body>
+</html>
